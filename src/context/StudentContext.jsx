@@ -6,11 +6,11 @@ export const StudentContext = createContext();
 
 export function StudentProvider({ children }) {
   const [students, setStudents] = useState([
-    { id: 1, name: "Bharath" },
-    { id: 2, name: "Praveen" },
-    { id: 3, name: "Kumar" },
-    { id: 4, name: "Ramya" },
-    { id: 5, name: "Monica" },
+    { id: 1, name: "Selva" },
+    { id: 2, name: "Harish" },
+    { id: 3, name: "prabhu" },
+    { id: 4, name: "yuvaraj" },
+    { id: 5, name: "shiva" },
   ]);
   const [favList, setFavList] = useState([]);
 
