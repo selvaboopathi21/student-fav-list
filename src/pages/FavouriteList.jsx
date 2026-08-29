@@ -7,13 +7,13 @@ export function FavouriteList() {
 
   return (
     <div>
-      <div className="mb-7">
-        <p className="text-sm font-semibold text-cocoa-500">Your selected people</p>
-        <h2 className="mt-1 text-3xl font-bold tracking-tight text-cocoa-900">Favourite Students</h2>
+      <div className="mb-6">
+        <p className="text-sm font-medium text-cocoa-500">Your selected students</p>
+        <h2 className="mt-1 text-2xl font-bold text-cocoa-900">Favourite Students</h2>
       </div>
 
       {favList.length === 0 ? (
-        <div className="rounded-2xl border border-dashed border-cocoa-200 bg-cocoa-50 p-8 text-center">
+        <div className="rounded-xl border border-dashed border-cocoa-200 bg-cocoa-50 p-8 text-center">
           <p className="font-semibold text-cocoa-700">No favourite students added yet</p>
           <p className="mt-1 text-sm text-cocoa-500">Choose students from the student list to see them here.</p>
         </div>
@@ -22,7 +22,7 @@ export function FavouriteList() {
           {favList.map((student) => (
             <li
               key={student.id}
-              className="flex items-center justify-between gap-4 rounded-2xl border border-cocoa-100 bg-white p-4 transition duration-200 hover:-translate-y-0.5 hover:border-cocoa-200 hover:shadow-md hover:shadow-cocoa-900/5"
+              className="flex items-center justify-between gap-4 rounded-xl border border-cocoa-100 p-3 transition hover:border-cocoa-200 hover:bg-cocoa-50/50"
             >
               <span className="flex items-center gap-3 font-semibold text-cocoa-900">
                 <span className="grid size-9 place-items-center rounded-full bg-cocoa-100 text-cocoa-700">♥</span>
@@ -30,7 +30,7 @@ export function FavouriteList() {
               </span>
               <button
                 onClick={() => removeFavourite(student.id)}
-                className="rounded-lg border border-cocoa-200 px-3 py-2 text-sm font-semibold text-cocoa-700 transition hover:border-red-300 hover:bg-red-50 hover:text-red-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cocoa-600"
+                className="rounded-lg border border-cocoa-200 px-3 py-1.5 text-sm font-semibold text-cocoa-700 transition hover:border-red-300 hover:bg-red-50 hover:text-red-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cocoa-600"
               >
                 Remove
               </button>
