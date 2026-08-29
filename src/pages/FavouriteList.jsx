@@ -14,7 +14,7 @@ export function FavouriteList() {
 
       {favList.length === 0 ? (
         <div className="rounded-2xl border border-dashed border-cocoa-200 bg-cocoa-50 p-8 text-center">
-          <p className="font-semibold text-cocoa-700">No favourite students yet</p>
+          <p className="font-semibold text-cocoa-700">No favourite students added yet</p>
           <p className="mt-1 text-sm text-cocoa-500">Choose students from the student list to see them here.</p>
         </div>
       ) : (

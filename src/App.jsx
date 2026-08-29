@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import { BrowserRouter, Routes, Route, NavLink } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import { StudentProvider } from "./context/StudentContext";
 import { StudentList } from "./pages/StudentList";
 import { FavouriteList } from "./pages/FavouriteList";
@@ -17,12 +17,8 @@ export default function App() {
     return () => window.removeEventListener("pointermove", moveGlow);
   }, []);
 
-  const navClass = ({ isActive }) =>
-    `rounded-full px-4 py-2 text-sm font-semibold transition duration-200 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cocoa-600 ${
-      isActive
-        ? "bg-cocoa-700 text-white shadow-sm"
-        : "text-cocoa-700 hover:bg-cocoa-100 hover:text-cocoa-900"
-    }`;
+  const navClass =
+    "rounded-full px-4 py-2 text-sm font-semibold text-cocoa-700 transition duration-200 hover:bg-cocoa-100 hover:text-cocoa-900 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-cocoa-600";
 
   return (
     <StudentProvider>
@@ -44,12 +40,12 @@ export default function App() {
                 <h1 className="mt-1 text-xl font-bold text-cocoa-900">Favourite Finder</h1>
               </div>
               <nav aria-label="Main navigation" className="flex w-full gap-2 sm:w-auto">
-                <NavLink to="/" end className={navClass}>
+                <Link to="/" className={navClass}>
                   Students
-                </NavLink>
-                <NavLink to="/favourites" className={navClass}>
+                </Link>
+                <Link to="/favourites" className={navClass}>
                   Favourites
-                </NavLink>
+                </Link>
               </nav>
             </header>
 
