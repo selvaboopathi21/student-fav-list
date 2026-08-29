@@ -1,0 +1,21 @@
+@import "tailwindcss";
+
+@theme {
+  --color-cocoa-50: #faf6f1;
+  --color-cocoa-100: #f0e4d7;
+  --color-cocoa-200: #dfc5ad;
+  --color-cocoa-500: #9a5d38;
+  --color-cocoa-600: #7c4629;
+  --color-cocoa-700: #5e321f;
+  --color-cocoa-900: #2d1710;
+}
+
+html {
+  background: #faf6f1;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
